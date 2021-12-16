@@ -1,0 +1,12 @@
+body {
+  width: 75%;
+  border: 3px dashed #b3d4fc;
+}
+
+label {
+  width: 10em;
+}
+
+.labelWidth {
+  width: 15em;
+}

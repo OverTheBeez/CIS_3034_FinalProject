@@ -1,0 +1,41 @@
+#main-header {
+  text-align: center;
+  background-color: black;
+  color: teal;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 5px;
+  padding: 10px;
+  background-color: black;
+}
+
+li {
+  display: inline;
+  padding: 5px;
+  color: white;
+}
+
+li:hover {
+  background-color: teal;
+}
+
+#accordion h3{
+  color: black;
+  background-color: teal;
+}
+
+#progressbar>div {
+  background-color: greenyellow;
+}
+
+#progressbar-text {
+  text-align: right;
+  font-weight: bold;
+}
+
+#slider-range>div {
+  background-color: teal;
+}

@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head> <!-- Beginning of Head Section-->
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="css/cssPractice.css">
+
+  <script>
+    $(document).ready(function () {
+      $("#header-color-changer").children("option:selected").val();
+    })
+
+  </script>
+
+</head> <!-- End of Head Section -->
+
+<body> <!-- Beginning of Body Section -->
+
+<header id="main-header">
+  <h1> More HTML & CSS Fun </h1>
+</header>
+
+<a href="index.html">Home</a>
+<a href="Assignments.html">Assignments</a>
+
+<div id="assignment-div">
+
+  <div class="test-group"></div>
+  <p class="test-paragraph">
+    This is a test.
+  </p>
+
+  <form id="test">
+
+
+  </form>
+
+
+
+  <script>
+    function changeColor(getColor) {
+      let color = document.querySelector('.test-paragraph');
+      let selectColor = getColor.value;
+      color.style.color = selectColor;
+    }
+  </script>
+
+  <script>
+    function changeFontSize(getSize) {
+      let size = document.querySelector('.test-paragraph');
+      let selectSize = getSize.value;
+      size.style.fontSize = selectSize;
+    }
+  </script>
+
+  <script>
+    function changeBackgroundColor(getColor) {
+      let color = document.querySelector('.test-paragraph');
+      let selectColor = getColor.value;
+      color.style.background = selectColor;
+    }
+  </script>
+
+  <label>Change Header Color</label>
+  <form id="user-choice">
+    <select name="planet" class="header-color-changer" onchange="changeColor(this)">
+      <option value="#ffffff">White</option>
+      <option value="#000000">Black</option>
+      <option value="#ff0000">Red</option>
+      <option value="#0000ff">Blue</option>
+      <option value="#80080">Purple</option>
+      <option value="#ffff00">Yellow</option>
+      <option value="#ffA500">Orange</option>
+      <option value="#008000">Green</option>
+    </select>
+
+    <label>Paragraph 1 Font Size</label>
+    <select name="planet" class="paragraph1-font-size-changer" onchange="changeFontSize(this)">
+      <option value="10px">10px</option>
+      <option value="20px">20px</option>
+      <option value="30px">30px</option>
+      <option value="40px">40px</option>
+      <option value="50px">50px</option>
+      <option value="60px">60px</option>
+      <option value="70px">70px</option>
+      <option value="80px">80px</option>
+    </select>
+
+    <label>Change Background Color</label>
+    <select name="planet" id="background-color-changer" onchange="changeBackgroundColor(this)">
+      <option value="#ffffff">White</option>
+      <option value="#000000">Black</option>
+      <option value="#ff0000">Red</option>
+      <option value="#0000ff">Blue</option>
+      <option value="#80080">Purple</option>
+      <option value="#ffff00">Yellow</option>
+      <option value="#ffA500">Orange</option>
+      <option value="#008000">Green</option>
+    </select>
+
+  </form>
+</div>
+
+<div id="first-div"> <!-- Start 1st Div -->
+  <h2 id="hello-world">Hello World</h2>
+  <p>
+    This is some sample text my IDE generated:
+    Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Accusantium aspernatur
+    consequatur, earum eius esse impedit inventore
+    itaque laboriosam magni modi nam nemo nulla officia
+    optio quod repellendus sint vel vitae?
+    <br>
+    This text has be styled to size: 15px
+  </p>
+  <img class="planet-img" src="img/Jupiter.jpg" alt="Jupiter" width="300px" height="200px"> <br>
+  <a class="planet-link" href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn More About Jupiter</a>
+</div> <!-- End 1st Div -->
+
+<div id="second-div"> <!-- Start 2nd Div -->
+  <h3 id="hello-again">Hello World, Again</h3>
+  <p>
+    The same sample generated text:
+    Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Adipisci aliquid consequatur
+    corporis eligendi ex id in, quos tenetur! Ad aliquid
+    asperiores beatae consequatur exercitationem, ipsa
+    iste perferendis quod soluta suscipit. <br>
+    This text has be styled to size: 20px
+  </p>
+  <img class="planet-img" src="img/Saturn.jpg" alt="Saturn" width="300px" height="200px"> <br>
+  <a class="planet-link" href="https://solarsystem.nasa.gov/planets/saturn/overview/" target="_blank">Learn More About Saturn</a>
+</div> <!-- End 2nd Div -->
+
+<div class="container"> <!--Start Container Div -->
+  <form class="my-form"> <!-- Start 1st Form -->
+    <div class="form-group"> <!-- Start Form Div -->
+      <label>Name: </label>
+      <input type="text" name="name" placeholder="Full Name">
+      <label>Email: </label>
+      <input type="text" name="email" placeholder="Email Address">
+      <label>Message</label>
+      <textarea name="message" id="message-area" cols="30" rows="10" placeholder="Type Your Message Here:"></textarea>
+      <input class="button" type="submit" value="Submit">
+    </div> <!-- End Form Div -->
+
+  </form> <!-- End 1st Form-->
+
+
+  <form class="second-form"> <!-- Start 2nd Form -->
+    <label id="planet-favorite">What is your favorite planet?</label>
+    <label>Mercury</label><input type="checkbox" value="planets">
+    <label>Venus</label><input type="checkbox" value="planets">
+    <label>Earth</label><input type="checkbox" value="planets" checked>
+    <label>Mars</label><input type="checkbox" value="planets">
+    <label>Jupiter</label><input type="checkbox" value="planets">
+    <label>Saturn</label><input type="checkbox" value="planets">
+    <label>Uranus</label><input type="checkbox" value="planets">
+    <label>Neptune</label><input type="checkbox" value="planets">
+  </form> <!-- End 2nd Form -->
+
+  <form class="third-form"> <!-- Start 3rd Form-->
+    <label>Do you like space?</label>
+    <label>Yes</label><input type="radio" name="space-love" checked>
+    <label>No</label><input type="radio" name="space-love">
+  </form> <!-- End 3rd Form -->
+
+  <form class="forth-form"> <!-- Start 4th Form-->
+    <label id="planet-visit">What planet would you like to visit?</label>
+    <select name="planet" id="planet-selector">
+      <option value="MER">Mercury</option>
+      <option value="VEN">Venus</option>
+      <option value="EAR">Earth</option>
+      <option value="MAR">Mars</option>
+      <option value="JUP">Jupiter</option>
+      <option value="SAT">Saturn</option>
+      <option value="URA">Uranus</option>
+      <option value="NEP">Neptune</option>
+
+    </select>
+
+  </form> <!-- End 4th Form-->
+
+</div> <!--End Container Div -->
+
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body> <!-- End of Body Section -->
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Entry Assignment</title>
+  <a href="index.html">Home</a>
+  <a href="Assignments.html">Assignments</a>
+
+  <script src="js/jquery-3.6.0.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("li:even").css("background-color", "red");
+    });
+
+    $(document).ready(function () {
+      $("li:odd").css("background-color", "blue");
+    });
+
+    /*
+    $(document).ready(function () {
+      $("text:even").css("background-color", "blue");
+    });
+
+    $(document).ready(function () {
+      $("text:odd").css("background-color", "blue");
+    });
+
+     */
+
+  </script>
+
+</head>
+<br>
+<body>
+
+<form action="">
+  <label for="textVal"></label>
+  <input type="text" id="textVal" placeholder="Write here:"/><br />
+  <button onclick="addToList()" type="button" id="addButton"> Add </button>
+  <button onclick="removeFromList()" type="button" id="removeButton"> Remove </button>
+  <button onclick="addColor()" type="button" id="addColor"> Add Color </button>
+
+</form>
+
+    <ul id="list" class="list">
+
+      <li>Test</li>
+      <li>Input</li>
+      <li>Sample</li>
+      <li>More</li>
+      <li>Practice</li>
+      <li>Jarad</li>
+      <li>Overby</li>
+
+    </ul>
+
+<script>
+
+  function addColor() {
+    $(document).ready(function () {
+      $("addColor").click(function () {
+        $("textVal").add("span").add("input").css("background", "green")
+      });
+    });
+  }
+
+/*
+  function listColor() {
+    var x = document.querySelectorAll("li")
+    for(let i = 0; i < x.length; i++) {
+      if((x[i] % 2) === 0) {
+        x[i].style.backgroundColor = "red";
+      } else {
+        x[i].style.backgroundColor = "blue";
+      }
+    }
+  }
+  */
+
+  function addToList()
+  {
+    var textValue = document.getElementById('textVal').value;
+    var listNode = document.getElementById('list');
+    var liNode = document.createElement("LI");
+    var textNode = document.createTextNode(textValue);
+
+    liNode.appendChild(textNode);
+    listNode.appendChild(liNode);
+
+  }
+
+  function removeFromList() {
+
+      $('#list li:last-child').remove();
+
+    /*
+    var list = document.getElementById("list");
+    ///list.removeChild(list.childNodes[0]);
+    list.prototype.splice(-1);
+
+     */
+
+  }
+  ///listColor();
+</script>
+
+<script>
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Start of Head Section-->
+  <meta charset="UTF-8">
+  <title>Sortable Accordion Assignment</title>
+
+  <link rel="stylesheet" href="css/AccordianPageStyle.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.css">
+  <link rel="stylesheet" href="css/jquery-ui.theme.css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+
+</head>
+<body>
+<!-- Start of Header -->
+<header id="main-header">
+  <h1> Fun with jQuery UI and Widgets </h1>
+</header>
+<!-- End of Header -->
+
+<!-- Nav Bar -->
+<ul id="nav-bar">
+  <li><a href="index.html"> Home </a></li>
+  <li><a href="Assignments.html"> Assignments </a></li>
+</ul>
+<!-- End of Nav Bar-->
+
+<!-- Adding Button Widget -->
+<div class="widget">
+  <input type="submit" value="Add to Accordion" id="openDialogBox" >
+</div>
+
+<div id="dialog" class="dialog" title="Accordion Editor">
+
+  <!-- Content for dialog box when button is pressed -->
+  <h4>Please enter a title and content. </h4>
+  <form>
+    <label for="textInputTitle">Header:</label>
+    <input type="text" name="title" id="textInputTitle" style="width: 250px">
+    <br>
+    <label for="textInputContent">Content:</label>
+    <textarea name="content" id="textInputContent"  rows="4" cols="30">
+		</textarea>
+    <br>
+    <div class="widget">
+      <input type="submit" value="Add" id="Add" >
+      <input type="submit" value="Done" id="Done" >
+    </div>
+  </form>
+
+</div>
+
+<!-- Accordion widget/ section is added/ created -->
+<div id="accordion">
+  <div class="group">
+
+    <!-- First section of accordion is added -->
+    <h3>Section 1</h3>
+    <div>
+      <p>
+        <!-- Slider widget added for users christmas budget -->
+        <!-- Coloring added from stylesheet -->
+        <label for="amount">Christmas Budget:</label>
+        <input type="text" id="amount" readonly style="border:0; color:teal; font-weight:bold;">
+      </p>
+
+      <div id="slider-range"></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquam commodi, consectetur consequuntur cum dignissimos dolores
+        et exercitationem explicabo hic illum impedit labore laudantium optio
+        placeat qui quia reiciendis suscipit voluptate.
+      </p>
+    </div>
+  </div>
+  <div class="group">
+    <!-- Second section of accordion is added -->
+    <h3>Section 2</h3>
+
+    <div class="widget">
+
+      <!-- Radio button widget added for users favorite video game console -->
+      <h4>Radio Button Widget</h4>
+      <fieldset>
+        <legend>Favorite Console: </legend>
+        <label for="checkbox-nested-1">PC
+          <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1" checked>
+        </label>
+        <label for="checkbox-nested-2">Xbox
+          <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+        </label>
+        <label for="checkbox-nested-3">Playstation
+          <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+        </label>
+        <label for="checkbox-nested-4">Nintendo
+          <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+        </label>
+      </fieldset>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Alias enim et harum ipsa mollitia numquam rerum! A accusantium,
+        ex fugit, ipsum iure laudantium necessitatibus, non quas qui quo reiciendis ut.
+      </p>
+    </div>
+  </div>
+  <div class="group">
+    <!-- Third section of accordion is added -->
+    <h3>Section 3</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium adipisci dolor eos error laudantium necessitatibus
+        recusandae? Consectetur corporis dicta earum, eius eveniet iure molestiae
+        nemo officia, repellendus reprehenderit sequi similique.
+      </p>
+
+      <!-- Simple list added to section -->
+      <ul>
+        <li>Learning</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>XML</li>
+      </ul>
+    </div>
+  </div>
+  <div class="group">
+    <!-- Fourth section of accordion is added -->
+    <h3>Section 4</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium asperiores dolor nihil ullam voluptatum.
+        Aliquid corporis deleniti distinctio itaque maiores modi nam
+        necessitatibus nemo, nobis nulla officiis, possimus sunt veniam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit.
+        Animi cum explicabo ipsum necessitatibus obcaecati odio omnis
+        ratione recusandae reiciendis ullam! Delectus eum ex in maxime
+        nisi nulla reprehenderit sed voluptas?
+      </p>
+    </div>
+  </div>
+  <div class="group">
+    <!-- Fifth section of accordion is added -->
+    <h3>Section 5</h3>
+    <div>
+
+      <!-- Progress bar widget added to section -->
+      <!-- Coloring added from stylesheet -->
+      <div id="progressbar"></div>
+      <div>
+        <p id="progressbar-text">Loading... 99%</p>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium asperiores dolor nihil ullam voluptatum.
+        Aliquid corporis deleniti distinctio itaque maiores modi nam
+        necessitatibus nemo, nobis nulla officiis, possimus sunt veniam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit.
+        Animi cum explicabo ipsum necessitatibus obcaecati odio omnis
+        ratione recusandae reiciendis ullam! Delectus eum ex in maxime
+        nisi nulla reprehenderit sed voluptas?
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Trying out some other random widgets -->
+
+<!-- Radio/checkbox widget -->
+<script>
+  $( function() {
+    $( "input[type='checkbox']" ).checkboxradio();
+  } );
+</script>
+
+<!-- Sliderbar widget -->
+<script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 25,
+      max: 500,
+      values: [ 25, 500 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+</script>
+
+<!-- Progressbar widget -->
+<script>
+  $(function () {
+    $("#progressbar").progressbar({
+      value: 99
+    });
+  });
+</script>
+
+<!-- Functions for Accordion Widget -->
+<script>
+  $(document).ready(function() {
+    $( ".widget input[type=submit]" ).button(); <!-- Function for button widget waiting for submit event -->
+    $( "input" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+
+  $( function() {
+    $( '#dialog' ).dialog();
+  } );
+
+  $( '#openDialogBox' ).click(function() { <!-- Opens dialog box with click event -->
+    dialog.dialog( 'open' );
+  });
+
+  dialog = $('#dialog' ).dialog({ <!-- Setting up dialog box characteristics -->
+    autoOpen: false,
+    height: 400, <!-- Setting base height -->
+    width: 450, <!-- Setting base width -->
+    modal: true,
+    close: function() {
+      form[ 0 ].reset();
+    }
+  });
+
+  <!-- Function to add content to accordion widget when add is clicked -->
+  $('#Add').click(function() {
+    var toAddTitle = $('#textInputTitle').val();
+    var toAddContent = $('#textInputContent').val();
+
+    <!-- Appending content to accordion widget -->
+    $('#accordion').append('<div><h3> ' + toAddTitle +
+      '</h3>' + '<div><p> ' + toAddContent + ' </p></div></div>');
+
+    $('#accordion').accordion('refresh');
+    $('#textInputTitle').val('');
+    $('#textInputContent').val('');
+  });
+
+  $( function() {
+    $( '#accordion' ).accordion({
+      header: '> div > h3'
+    })
+      .sortable({
+        axis: 'y',
+        handle: 'h3',
+        stop: function( event, ui ) {
+          $( this ).accordion( 'refresh' );
+        }
+      });
+  });
+
+  <!-- Closing dialog box when user clicks 'close' -->
+  $('#Done').click(function() {
+    $('#dialog').animate({opacity: '0.0'},
+      500, function(){
+        $('#dialog').dialog('close');
+      });
+  });
+</script>
+<br>
+
+</body>
+</html>

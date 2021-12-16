@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator</title>
+</head>
+<body>
+<h1>This is a simple BMI Calculator program.</h1>
+<a href="index.html">Home</a>
+<a href="Assignments.html">Assignments</a>
+
+<p id = "bmi calculator"></p>
+<script>
+  function calculateBMI() {
+    var height = Number(prompt("Please enter your height in inches: "));
+    var weight = Number(prompt("Please enter your weight in pounds: "));
+
+    var bmi = (703 * weight) / (Math.pow(height, 2));
+
+    document.getElementById("bmi calculator").innerHTML = "Your height is: " + height + ", and your weight is: " + weight
+    + ", resulting in a BMI of: " + bmi;
+
+    if(bmi >= 30) {
+      alert("You are obese.")
+    } else if( bmi >= 25 && bmi < 29.9) {
+      alert("You are overweight.")
+    } else if(bmi >= 18.5 && bmi < 25) {
+      alert("Your BMI is normal.")
+    } else {
+      alert("You are underweight.")
+    }
+  }
+
+  calculateBMI();
+</script>
+
+</body>
+</html>
